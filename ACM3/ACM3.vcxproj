@@ -154,10 +154,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AcientMessage.h" />
     <ClInclude Include="Oildeposits.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AcientMessage.cpp" />
     <ClCompile Include="ACM3.cpp" />
     <ClCompile Include="Oildeposits.cpp" />
     <ClCompile Include="pch.cpp">
