@@ -1,12 +1,15 @@
 ﻿#include "pch.h"
 //#include "Oildeposits.h"
 #include "AcientMessage.h"
+#include "Shibie.h"
 #include <iostream>
 #include <memory>
+#include <sstream>
+#include <iterator>
 using namespace std;
 int main() {
 	string p = "C:\\Users\\xiaosong\\Desktop\\text.txt";
-	vector<string> s = { "FFF", "F0F", "FFF", "F0F", "FFF" };
-	shared_ptr<AcientMessage> a = make_shared<AcientMessage>(s);
+	shared_ptr<Shibie> s = make_shared<Shibie>(p);
+	s->dfs(cout);
 	return 0;
 }

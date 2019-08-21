@@ -54,8 +54,8 @@ int Oildeposits::dfs_sub(const int &x, const int &y, int flag) {
 		this->graph[x][y].second = flag;
 		int xl = (x - 1 > 0) ? x - 1 : 0;
 		int yl = (y - 1 > 0) ? y - 1 : 0;
-		int xr = (x + 2 < this->graph[0].size())? x + 2 : this->graph[0].size();
-		int yr = (y + 2 < this->graph.size()) ? y + 2 : this->graph.size();
+		int xr = (x + 2 < this->graph.size())? x + 2 : this->graph.size();
+		int yr = (y + 2 < this->graph[0].size()) ? y + 2 : this->graph[0].size();
 		for (int i = xl; i != xr; ++i)
 			for (int j = yl; j != yr; ++j)
 				this->dfs_sub(i, j, flag);

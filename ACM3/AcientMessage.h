@@ -5,7 +5,7 @@
 #include <map>
 using namespace std;
 class AcientMessage {
-private:
+public:
 	vector<string> hex; //16进制字符组
 	vector<vector<char>> graph; //2进制字符矩阵
 	map<char, string> hex_binary = {
@@ -27,7 +27,7 @@ private:
 	{'F', "1111"}
 	};
 	map<int, char> hole_num = { {2, 'A'}, {4, 'J'}, {6, 'D'}, {5, 'S'}, {1, 'W'}, {3, 'K'} };
-public:
+
 	AcientMessage() = default;
 	AcientMessage(const vector<string> &);
 	~AcientMessage();
@@ -35,6 +35,7 @@ public:
 	AcientMessage(AcientMessage &&);
 	AcientMessage & operator=(const AcientMessage &);
 	AcientMessage & operator=(AcientMessage &&);
+
 };
 #endif // !ACIENTMESSAGE_H
 
