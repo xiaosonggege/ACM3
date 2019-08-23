@@ -13,8 +13,13 @@ AcientMessage::AcientMessage(const vector<string> &hexs) :
 		istringstream istr(s_row);
 		istream_iterator<char> in_iter(istr), eof;
 		vector<char> graph_row(in_iter, eof);
+		graph_row.insert(graph_row.begin(), '0');
+		graph_row.push_back('0');
 		this->graph.push_back(graph_row);
 	}
+	vector<char> zero(graph[0].size(), '0');
+	this->graph.insert(graph.begin(), zero);
+	this->graph.push_back(zero);
 }
 AcientMessage::~AcientMessage() {}
 AcientMessage::AcientMessage(const AcientMessage &a) {
